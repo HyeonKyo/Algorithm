@@ -10,7 +10,6 @@ public class Main_백준_1987_알파벳_김현교 {
 	static int C;
 	static char[][] m;
 	static int max;
-	static int[] dp;
 	
 	static int[] dl = {-1, 0, 1, 0};
 	static int[] dr = {0, 1, 0, -1};
@@ -36,6 +35,7 @@ public class Main_백준_1987_알파벳_김현교 {
 		}
 		
 		ck = ck | 1 << m[l][r];
+		
 		for (int i = 0; i < 4; i++) {
 			int il = l + dl[i];
 			int ir = r + dr[i];
