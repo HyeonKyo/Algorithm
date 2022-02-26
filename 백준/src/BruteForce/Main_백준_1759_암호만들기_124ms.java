@@ -39,8 +39,6 @@ public class Main_백준_1759_암호만들기_124ms {
 	static void combi(int start, int depth) {
 		//조합 완성되면 유효성 체크 후 저장
 		if (depth == L) {
-			consonant = 0;
-			vowel = 0;
 			checkCount();
 			if (consonant >= 2 && vowel >= 1) {
 				for (int i = 0; i < L; i++) {
@@ -59,6 +57,9 @@ public class Main_백준_1759_암호만들기_124ms {
 	}
 	
 	static void checkCount() {
+		consonant = 0;
+		vowel = 0;
+		
 		for (int i = 0; i < L; i++) {
 			switch (result[i]) {
 			case 'a': case 'e': case 'i': case 'o': case 'u':

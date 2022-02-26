@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main_¹éÁØ_2839_¼³ÅÁ¹è´Þ {
+public class Main_ë°±ì¤€_2839_ì„¤íƒ•ë°°ë‹¬ {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

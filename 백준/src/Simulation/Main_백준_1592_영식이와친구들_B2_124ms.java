@@ -16,13 +16,17 @@ public class Main_백준_1592_영식이와친구들_B2_124ms {
 		int M = Integer.parseInt(st.nextToken());
 		int L = Integer.parseInt(st.nextToken());
 		
-		int[] getCnt = new int[N + 1];
+		int[] getCnt = new int[N];//공 받은 카운트 셈
 		int idx = 1;
 		int cnt = 0;
+		
 		while (true) {
-			if (getCnt[idx] == M - 1)
+			if (getCnt[idx] == M - 1)//이제 받으면 M이 되므로 종료
 				break;
-			if ((++getCnt[idx] & ISODD) != 0) {
+			//현재 인덱스 사람의 받은 카운트 늘려주고
+			//다음 인덱스 구하기
+			
+			if ((++getCnt[idx] & ISODD) != 0) {//받은 카운트가 홀수라면 시계 방향
 				idx += L;
 				if (idx >= N)
 					idx %= N;

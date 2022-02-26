@@ -12,31 +12,37 @@ public class Main_백준_1244_스위치켜고끄기_S3_124ms {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
-		N = Integer.parseInt(br.readLine());
+		
+		N = Integer.parseInt(br.readLine());//스위치 개수
+		//스위치 상태 저장
 		boolean[] s = new boolean[N];
 		StringTokenizer st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < N; i++) {
 			s[i] = st.nextToken().equals("1") ? true : false;
 		}
+		//학생수
 		int p = Integer.parseInt(br.readLine());
+		
 		for (int i = 0; i < p; i++) {
 			st = new StringTokenizer(br.readLine());
-			String tmp = st.nextToken();
-			int n = Integer.parseInt(st.nextToken());
+			
+			String tmp = st.nextToken();//성별
+			int n = Integer.parseInt(st.nextToken());//받은 수
+			
 			switch (tmp) {
-			case "1":
+			case "1"://남자
 				int idx = n - 1;
 				while (idx < N) {
-					s[idx] ^= true;
-					idx += n;
+					s[idx] ^= true;//상태 변경
+					idx += n;//배수 인덱스
 				}
 				break;
-			case "2":
-				s[n - 1] ^= true;
+			case "2"://여자
+				s[n - 1] ^= true;//시작점 상태 변경
 				int il = n - 2;
 				int ir = n;
-				while (il >= 0 && ir < N && s[il] == s[ir]) {
-					s[il--] ^= true;
+				while (il >= 0 && ir < N && s[il] == s[ir]) {//상태 같으면
+					s[il--] ^= true;//좌 우로 상태 변경
 					s[ir++] ^= true;
 				}
 				break;

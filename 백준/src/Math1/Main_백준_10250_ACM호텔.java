@@ -3,7 +3,7 @@ package Math1;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Main_¹éÁØ_10250_ACMÈ£ÅÚ {
+public class Main_ë°±ì¤€_10250_ACMí˜¸í…” {
 
 	public static void main(String[] args) {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -2,7 +2,7 @@ package Math1;
 
 import java.util.Scanner;
 
-public class Main_¹éÁØ_1712_¼ÕÀÍºĞ±âÁ¡ {
+public class Main_ë°±ì¤€_1712_ì†ìµë¶„ê¸°ì {
 
 	public static void main(String[] args) {
 		Scanner s = new Scanner(System.in);
